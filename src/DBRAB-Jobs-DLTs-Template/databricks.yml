@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=bundle_config_schema.json
+bundle:
+  name: SQLDay2024
+include:
+  - resources/**/*.yml
+targets:
+  dev:
+    workspace:
+      host: https://adb-766832655560790.10.azuredatabricks.net/

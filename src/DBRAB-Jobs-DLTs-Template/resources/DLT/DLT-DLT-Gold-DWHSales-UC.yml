@@ -1,0 +1,20 @@
+resources:
+  pipelines:
+    DLT-DLT-Gold-DWHSales-UC:
+      catalog: ${bundle.target}_gold
+      channel: PREVIEW
+      clusters:
+      - label: default
+        num_workers: 1
+      configuration:
+        Param1: rawmarketing
+        spark.databricks.sql.initial.catalog.name: hive_metastore
+      continuous: false
+      development: false
+      edition: CORE
+      libraries:
+      - notebook:
+          path: /Users/tkrawczyk@future-processing.com/SQLDay2024/Code/DLT/Gold/DWH
+      name: DLT-Gold-DWHSales-[UC]
+      photon: false
+      target: DWHSales
